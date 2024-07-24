@@ -2,7 +2,7 @@ echo "Creating python virtual environment:"
 venv_directory=testmatrix_venv
 python3 -m venv $venv_directory --system-site-packages
 source $venv_directory/bin/activate
-echo "Virtual environment activated"
+echo "Virtual environment created"
 
 install_path=$(pwd)
 systemd_name=testmatrix
