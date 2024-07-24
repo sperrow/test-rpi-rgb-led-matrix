@@ -3,6 +3,7 @@
 from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
+import os
 
 
 class RunText(SampleBase):
@@ -13,8 +14,10 @@ class RunText(SampleBase):
     def run(self):
         offscreen_canvas = self.matrix.CreateFrameCanvas()
         font = graphics.Font()
-        # font_path = os.path.join(os.path.dirname(__file__), "../fonts/4x6.bdf")
-        font.LoadFont("fonts/7x13.bdf")
+        font_path = os.path.join(os.path.dirname(__file__), "fonts/4x6.bdf")
+        # font_path = 'fonts/7x13.bdf'
+        print(font_path)
+        font.LoadFont(font_path)
         textColor = graphics.Color(255, 255, 0)
         pos = offscreen_canvas.width
         my_text = self.args.text
