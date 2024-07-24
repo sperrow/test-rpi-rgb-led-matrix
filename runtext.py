@@ -14,8 +14,8 @@ class RunText(SampleBase):
     def run(self):
         offscreen_canvas = self.matrix.CreateFrameCanvas()
         font = graphics.Font()
-        font_path = os.path.join(os.path.dirname(__file__), "fonts/4x6.bdf")
-        # font_path = 'fonts/7x13.bdf'
+        # font_path = os.path.join(os.path.dirname(__file__), "fonts/4x6.bdf")
+        font_path = './fonts/7x13.bdf'
         print(font_path)
         font.LoadFont(font_path)
         textColor = graphics.Color(255, 255, 0)
